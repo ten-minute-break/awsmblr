@@ -48,8 +48,8 @@ Once done, there's a million ways forward: from making your own core instruction
 
 ### Usability
 
-- create a tokenizer and parser, so that the bytecode could be loaded from a text file
 - create a loader for bytecode from a binary format (already really close, just needs to be loaded correctly)
+- create a tokenizer and parser, so that the bytecode could be loaded from a text file and reinterpreted without restarting the program
 - improve error-handling and reporting
 
 ### Design
@@ -57,3 +57,8 @@ Once done, there's a million ways forward: from making your own core instruction
 - the [JVM](https://docs.oracle.com/javase/specs/jvms/se7/html/jvms-6.html) is very similar to our infrastructure. They have some weird instructions like `PUSH0`, `PUSH1`, `DUP2`... were they just being silly or should we have those too?
 - try implementing some other types except for just `int`. how does that affect our codebase?
 - if we wanted to go for types, should we include typechecking like the [CIL](https://en.wikipedia.org/wiki/Common_Intermediate_Language) does? it actually has types on the assembly-level, how cool is that?!
+- to make a scripting language useful, it needs to be able to connect directly to outside variables (gameplay/engine-side structs etc.); in our case, we would need to be able to pass references to some outside variables as the `Environment`, and read and affect them from the script
+- maybe we need a higher-level scripting language on top of this that is compiled into awsmblr: basically, every statement or expression in that language, like `R1 + R3`, would be translated into a whole series of instructions (`pushr(1), pushr(3), add()` in this case) during translation
+
+All of these are cool additions for later challenges :) let's talk about what you find interesting and where you would want to pull this!
+As always, feel free to leave your code in a separate branch via pull requests!
