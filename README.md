@@ -7,8 +7,6 @@ The project for anyone who wants to try out writing a small interpreter for an a
 Some people who want to know more about how scripting languages are implemented and maybe want to put some into their game.
 This kind of virtual machine instruction set is VERY reminiscent of Lua, as it was used originally in WoW, so I wanted to start with that. :)
 
-Warning: this project looks bigger on the outside. ;)
-
 ## What is it?
 
 It's a small assembly-like language! It can't do much; integer-only arithmetic, some comparisons, etc. but it lays down some nice groundwork if you want to continue on and extend it!
