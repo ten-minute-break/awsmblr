@@ -58,5 +58,10 @@ Once done, there's a million ways forward: from making your own core instruction
 - to make a scripting language useful, it needs to be able to connect directly to outside variables (gameplay/engine-side structs etc.); in our case, we would need to be able to pass references to some outside variables as the `Environment`, and read and affect them from the script
 - maybe we need a higher-level scripting language on top of this that is compiled into awsmblr: basically, every statement or expression in that language, like `R1 + R3`, would be translated into a whole series of instructions (`pushr(1), pushr(3), add()` in this case) during translation
 
+### Optimizations
+
+- arithmetic operations on constants can be folded together into one single `pushc`
+- limited reachability analysis can be done on jumps to remove them if they're never going to happen
+ 
 All of these are cool additions for later challenges :) let's talk about what you find interesting and where you would want to pull this!
 As always, feel free to leave your code in a separate branch via pull requests!
