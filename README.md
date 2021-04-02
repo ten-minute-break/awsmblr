@@ -33,7 +33,7 @@ PrintEnvironment(env);
 
 ## How do I actually start?
 
-The `awsmblr.h` file contains a large comment with all the documentation on the instructions you need to implement. Don't be scared, take it one by one, feel free to discuss!
+The `awsmblr.h` file contains a large comment with all the documentation on the instructions whose interpretation you need to implement. This can all be done in `awsmblr.cpp`, within that one empty function.
 
 Once done, there's a million ways forward: from making your own core instructions, to implementing instructions as helper functions that use the current core instructions en masse -- anything is possible. Here's a couple of directions:
 
